@@ -15,26 +15,12 @@ const authedClient = new CoinbasePro.AuthenticatedClient(
     apiURI
 );
 
-// const adaBuyParams = {
-//     'funds': 5, // USD,
-//     'currency': 'ADA',
-//     'type': 'market',
-//     'product_id': 'ADA-USD'
-// };
-
 const ethBuyParams = {
     'funds': 5, // USD,
     'currency': 'ETH',
     'type': 'market',
     'product_id': 'ETH-USD'
 };
-
-// const btcBuyParams = {
-//     'funds': 5, // USD,
-//     'currency': 'ETH',
-//     'type': 'market',
-//     'product_id': 'ETH-USD'
-// };
 
 
 const callback = (err, response, data) => {
@@ -45,7 +31,6 @@ const callback = (err, response, data) => {
     }
 };
 
-
 setInterval(function () {
     var date = new Date();
     const hour = date.getHours();
@@ -55,10 +40,6 @@ setInterval(function () {
         authedClient.buy(ethBuyParams, callback);
     }
 }, 3600000) //run every hour
-
-//authedClient.buy(adaBuyParams, callback);
-// authedClient.buy(ethBuyParams, callback);
-// authedClient.buy(btcBuyParams, callback);
 
 // console.log(authedClient);
 
