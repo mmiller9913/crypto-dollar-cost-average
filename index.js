@@ -30,13 +30,6 @@ const callback = (err, response, data) => {
     }
 };
 
-// Add funds to account
-const depositPaymentParamsUSD = {
-    amount: '275.00',
-    currency: 'USD',
-    payment_method_id: 'dcd662fe-f4bf-59c0-9c50-652dfd4dc403', // cap_one_bank_account
-  };
-
 setInterval(function () {
     var date = new Date();
     const hour = date.getHours();
@@ -45,15 +38,6 @@ setInterval(function () {
         authedClient.buy(ethBuyParams, callback);
     }
 }, 3600000) //run every hour
-
-setInterval(function () {
-    var date = new Date();
-    const day = date.getDay();
-    if (day === 10) {
-        console.log('Deposited $250');
-        authedClient.depositPayment(depositPaymentParamsUSD, callback);
-    }
-}, 864000000) //run every day
 
 console.log('up and running');
 
