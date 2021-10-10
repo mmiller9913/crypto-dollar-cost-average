@@ -42,7 +42,7 @@ const callback = (err, response, data) => {
 //added the below for use with Heroku Scheduler
 //this script will run every day at X time
 authedClient.buy(ethBuyParams, callback);
-console.log('Bought eth');
+console.log('Bought ETH');
 
 //turorial
 //https://github.com/coinbase/coinbase-pro-node
