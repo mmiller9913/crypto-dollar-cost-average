@@ -1,3 +1,5 @@
+//NOTE: This script currently runs via crontab on AWS
+
 const CoinbasePro = require('coinbase-pro');
 require('dotenv').config({ path: '.env' });
 
@@ -29,9 +31,8 @@ const callback = (err, response, data) => {
     }
 }
 
-//added the below for use with Heroku Scheduler/cron
-//this script will run every day at X time
 authedClient.buy(ethBuyParams, callback);
+
 console.log('Bought ETH');
 
 //turorial
