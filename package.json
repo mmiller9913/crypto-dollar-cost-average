@@ -1,8 +1,10 @@
 {
   "name": "coinbase-pro-bot",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "14.17.0"
+  },
   "scripts": {
     "start": "node start.js"
   },
@@ -11,7 +13,6 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "coinbase-pro": "^0.9.0",
-    "concurrently": "^6.2.1",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1"

@@ -27,19 +27,9 @@ const callback = (err, response, data) => {
     } else {
         console.log(data);
     }
-};
+}
 
-//Made this a cron job using Heroku Scheduler, so commented out the below setInterval function
-// setInterval(function () {
-//     var date = new Date();
-//     const hour = date.getHours();
-//     if (hour === 15) {
-//         console.log('Bought ETH');
-//         authedClient.buy(ethBuyParams, callback);
-//     }
-// }, 3600000) //run every hour
-
-//added the below for use with Heroku Scheduler
+//added the below for use with Heroku Scheduler/cron
 //this script will run every day at X time
 authedClient.buy(ethBuyParams, callback);
 console.log('Bought ETH');
