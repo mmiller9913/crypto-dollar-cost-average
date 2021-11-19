@@ -28,12 +28,13 @@ const callback = (err, response, data) => {
         console.log(err);
     } else {
         console.log(data);
+        console.log(`Bought ETH`);
+
     }
 }
 
 authedClient.buy(ethBuyParams, callback);
 
-console.log('Bought ETH');
 
-//turorial
+//turorial is here:
 //https://github.com/coinbase/coinbase-pro-node
